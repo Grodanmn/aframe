@@ -1,0 +1,53 @@
+<script
+    src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+<script src="./assets/aframe-ar.js"></script>
+
+<body style='margin : 0px; overflow: hidden;'>
+    <div style='position: fixed; top: 10px; text-align: center; z-index: 1; width: 100%; background: gray;'>
+       White region marker (markers with white borders) example, use <a href="assets/white_000.png">this inverted marker.</a>
+    </div>
+    <a-scene embedded
+        arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; labelingMode: white_region;' renderer='precision: medium;'>
+
+        <a-assets>
+            <img id="texture-0" src="./src/102.jpg">
+            <img id="texture-1" src="./src/436.png">
+            <img id="texture-2" src="./src/707.png">
+            <img id="texture-3" src="./src/1175.png">
+            <img id="texture-4" src="./src/1237.png">
+            <img id="texture-5" src="./src/1875.png">
+            <img id="texture-6" src="./src/3172.png">
+          </a-assets>
+
+        <a-marker type='barcode' value='0'>
+            <a-box depth="1" height=".01" width="1" position='0 0 0' material='opacity: 0.5; side: double;color:red;' src="#texture-0"></a-box>
+        </a-marker>
+
+        <a-marker type='barcode' value='1'>
+            <a-box depth="1" height=".01" width="1" position='0 0 0' material='opacity: 0.5; side: double;color:red;' src="#texture-1"></a-box>
+        </a-marker>
+
+        <a-marker type='barcode' value='2'>
+            <a-box depth="1" height=".01" width="1" position='0 0 0' material='opacity: 0.5; side: double;color:red;' src="#texture-2"></a-box>
+        </a-marker>
+
+        <a-marker type='barcode' value='3'>
+            <a-box depth="1" height=".01" width="1" position='0 0 0' material='opacity: 0.5; side: double;color:red;' src="#texture-3"></a-box>
+        </a-marker>
+
+        <a-marker type='barcode' value='4'>
+            <a-box depth="1" height=".01" width="1" position='0 0 0' material='opacity: 0.5; side: double;color:red;' src="#texture-4"></a-box>
+        </a-marker>
+
+        <a-marker type='barcode' value='5'>
+            <a-box depth="1" height=".01" width="1" position='0 0 0' material='opacity: 0.5; side: double;color:red;' src="#texture-5"></a-box>
+        </a-marker>
+
+        <a-marker type='barcode' value='6'>
+            <a-box depth="1" height=".01" width="1" position='0 0 0' material='opacity: 0.5; side: double;color:red;' src="#texture-6"></a-box>
+        </a-marker>
+
+        <a-entity camera></a-entity>
+
+    </a-scene>
+</body>
